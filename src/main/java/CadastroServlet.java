@@ -18,7 +18,7 @@ public class CadastroServlet extends HttpServlet {
         String email = request.getParameter("email");
         String senha = request.getParameter("senha");
 
-        response.setContentType("txt/html;charset=UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -26,7 +26,7 @@ public class CadastroServlet extends HttpServlet {
             out.println("<title> Servlet CadastroServlet</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h3> Nome de login " + nome + "Email " + email + "</h3>");
+            out.println("<h3> Usuário Cadastrado " + nome +  "</h3>");
             out.println("</body>");
             out.println("</html>");
         }

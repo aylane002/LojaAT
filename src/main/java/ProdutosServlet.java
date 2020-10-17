@@ -18,7 +18,7 @@ public class ProdutosServlet extends HttpServlet {
         String descricao = request.getParameter("descricao");
         String valor = request.getParameter("valor");
 
-        response.setContentType("txt/html");
+        response.setContentType("text/html");
         try (PrintWriter out = response.getWriter()) {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -26,7 +26,26 @@ public class ProdutosServlet extends HttpServlet {
             out.println("<title> Servlet ProdutosServlet</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h3> Nome do Produto " + nome + "Id " + id + "Descrição " + descricao + "Valor " + valor + "</h3>");
+            out.println("<table>");
+            out.println("<tr>");
+            out.println("<th> Nome </th>");
+            out.println("<th> Id </th>");
+            out.println("<th> Descrição </th>");
+            out.println("<th> Valor </th>");
+            out.println("</tr>");
+
+            out.println("<tr>");
+            out.println("<th>" + nome + "</th>");
+            out.println("<th>" + id + "</th>");
+            out.println("<th>" + descricao + "</th>");
+            out.println("<th>" + valor + "</th>");
+            out.println("</tr>");
+
+            out.println("</table>");
+
+
+
+          //  out.println("<h3> Nome do Produto " + nome + "Id " + id + "Descrição " + descricao + "Valor " + valor + "</h3>");
             out.println("</body>");
             out.println("</html>");
         }
