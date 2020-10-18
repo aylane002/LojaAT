@@ -39,6 +39,7 @@ public class ProdutosServlet extends HttpServlet {
             out.println("<th>" + id + "</th>");
             out.println("<th>" + descricao + "</th>");
             out.println("<th>" + valor + "</th>");
+            out.println("<th> <a href= '/TrabalhoLoja_war/AddCarrinhoServlet? id=" +id+ "'> add </th>");
             out.println("</tr>");
 
             out.println("</table>");
